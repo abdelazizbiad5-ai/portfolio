@@ -27,12 +27,12 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main className="container mx-auto px-4 py-24">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+      <main className="container mx-auto px-4 py-20 md:py-24">
+        <div className="text-center mb-8 md:mb-12">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
             My Projects
           </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             A curated collection of applications and solutions I've built, showcasing various technologies and approaches.
           </p>
         </div>
@@ -46,15 +46,15 @@ export default function ProjectsPage() {
           onTechnologyChange={setSelectedTechnology}
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
           {filteredProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
 
         {filteredProjects.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground text-lg">
+          <div className="text-center py-8 md:py-12">
+            <p className="text-muted-foreground text-base md:text-lg">
               No projects found with the selected filters.
             </p>
           </div>

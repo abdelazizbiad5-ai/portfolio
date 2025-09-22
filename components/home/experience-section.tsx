@@ -42,49 +42,49 @@ const experiences = [
 
 export function ExperienceSection() {
   return (
-    <section id="experience" className="py-24 bg-white">
+    <section id="experience" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Experience</h2>
-            <p className="text-xl text-muted-foreground">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Experience</h2>
+            <p className="text-lg md:text-xl text-muted-foreground">
               My professional journey building innovative solutions
             </p>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="relative pl-8 pb-12 border-l-2 border-gray-200 last:pb-0"
+                className="relative pl-6 md:pl-8 pb-8 md:pb-12 border-l-2 border-gray-200 last:pb-0"
               >
-                <div className="absolute -left-3 top-0 w-6 h-6 bg-blue-600 rounded-full border-4 border-white shadow"></div>
+                <div className="absolute -left-2 md:-left-3 top-0 w-4 h-4 md:w-6 md:h-6 bg-blue-600 rounded-full border-2 md:border-4 border-white shadow"></div>
                 
-                <div className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div className="bg-gray-50 rounded-2xl p-4 md:p-8 hover:shadow-lg transition-shadow">
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-1">
+                      <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-1">
                         {exp.position}
                       </h3>
-                      <div className="flex items-center text-gray-600 mb-2">
+                      <div className="flex items-center text-gray-600 mb-2 lg:mb-0">
                         <Building2 className="w-4 h-4 mr-2" />
                         <span className="font-medium">{exp.company}</span>
                       </div>
                     </div>
-                    <div className="flex items-center text-gray-500">
+                    <div className="flex items-center text-gray-500 text-sm md:text-base">
                       <Calendar className="w-4 h-4 mr-2" />
                       <span>{exp.period}</span>
                     </div>
                   </div>
 
-                  <p className="text-gray-700 mb-6 leading-relaxed">
+                  <p className="text-sm md:text-base text-gray-700 mb-4 md:mb-6 leading-relaxed">
                     {exp.description}
                   </p>
 
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Key Achievements:</h4>
-                      <ul className="list-disc list-inside space-y-1 text-gray-700">
+                      <h4 className="text-sm md:text-base font-semibold text-gray-900 mb-2">Key Achievements:</h4>
+                      <ul className="list-disc list-inside space-y-1 text-sm md:text-base text-gray-700">
                         {exp.achievements.map((achievement, idx) => (
                           <li key={idx}>{achievement}</li>
                         ))}
@@ -92,13 +92,13 @@ export function ExperienceSection() {
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                      <h4 className="text-sm md:text-base font-semibold text-gray-900 mb-2">Technologies:</h4>
                       <div className="flex flex-wrap gap-2">
                         {exp.technologies.map((tech) => (
                           <Badge
                             key={tech}
                             variant="outline"
-                            className="bg-blue-50 border-blue-200 text-blue-800"
+                            className="bg-blue-50 border-blue-200 text-blue-800 text-xs md:text-sm"
                           >
                             {tech}
                           </Badge>

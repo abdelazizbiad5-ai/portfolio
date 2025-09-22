@@ -21,14 +21,14 @@ export function ProjectFilter({
   onTechnologyChange,
 }: ProjectFilterProps) {
   return (
-    <Card className="mb-8">
+    <Card className="mb-6 md:mb-8">
       <CardHeader>
-        <CardTitle>Filter Projects</CardTitle>
+        <CardTitle className="text-lg md:text-xl">Filter Projects</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label className="text-sm font-medium mb-2 block">Category</label>
+            <label className="text-xs md:text-sm font-medium mb-2 block">Category</label>
             <Select value={selectedCategory} onValueChange={onCategoryChange}>
               <SelectTrigger>
                 <SelectValue placeholder="Select category" />
@@ -44,7 +44,7 @@ export function ProjectFilter({
           </div>
 
           <div>
-            <label className="text-sm font-medium mb-2 block">Technology</label>
+            <label className="text-xs md:text-sm font-medium mb-2 block">Technology</label>
             <Select value={selectedTechnology} onValueChange={onTechnologyChange}>
               <SelectTrigger>
                 <SelectValue placeholder="Select technology" />
